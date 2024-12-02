@@ -40,6 +40,43 @@
             },
             "args": [],
             "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'day2'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=day2",
+                    "--package=adventofcode2024"
+                ],
+                "filter": {
+                    "name": "day2",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'day2'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=day2",
+                    "--package=adventofcode2024"
+                ],
+                "filter": {
+                    "name": "day2",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
         }
     ]
 }
